@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 //import 'package:quiz_app/gradient_container.dart';
 import 'package:quiz_app/start_screen.dart';
 
+const beginAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
+
 void main() {
   runApp(MaterialApp(
     home: Scaffold(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-const beginAlignment = Alignment.topLeft;
-const endAlignment = Alignment.bottomRight;
+
 
 class StartScreen extends StatelessWidget {
   // make a constructor
