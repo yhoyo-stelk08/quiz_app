@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class StartScreen extends StatelessWidget {
   // make a constructor
   const StartScreen({super.key});
@@ -20,7 +18,10 @@ class StartScreen extends StatelessWidget {
         // add childrent into container widget
         children: [
           // Image widget
-          Image.asset('assets/images/quiz-logo.png', width: 300,),
+          Image.asset(
+            'assets/images/quiz-logo.png',
+            width: 300,
+          ),
           // SizedBox widget
           const SizedBox(
             height: 20,
