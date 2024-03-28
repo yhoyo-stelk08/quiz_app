@@ -8,6 +8,8 @@ class GradientContainer extends StatelessWidget {
 
   final List<Color> colors;
 
+  void startQuiz() {}
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +24,8 @@ class GradientContainer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/quiz-logo.png')
+            Image.asset('assets/images/quiz-logo.png'),
+            TextButton(onPressed: startQuiz, child: const Text('Start Quiz',),)
           ],
         ),
       ),
