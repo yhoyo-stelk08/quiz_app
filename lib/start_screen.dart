@@ -46,6 +46,9 @@ class StartScreen extends StatelessWidget {
           OutlinedButton(
             // for onPressed property must return a void, so we make dummy void inside the class
             onPressed: startQuiz,
+            style: OutlinedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 117, 57, 29),
+            ),
             // for child property must return a widget, so we add the Text widget
             child: const Text(
               'Start Quiz', // required parameters in Text widget
