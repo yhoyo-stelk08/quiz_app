@@ -11,11 +11,11 @@ class Quiz extends StatefulWidget {
   @override
   State<Quiz> createState() {
     // TODO: implement createState
-    return _Quiz();
+    return _QuizState();
   }
 }
 
-class _Quiz extends State<Quiz> {
+class _QuizState extends State<Quiz> {
 
   @override
   Widget build(context) {
