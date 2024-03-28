@@ -22,10 +22,34 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset('assets/images/quiz-logo.png'),
-            TextButton(onPressed: startQuiz, child: const Text('Start Quiz',),)
+            const SizedBox(
+              height: 40,
+            ),
+            const Text(
+              'Learn Flutter the fun way !',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            TextButton(
+              onPressed: startQuiz,
+              child: const Text(
+                'Start Quiz',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+              ),
+            )
           ],
         ),
       ),
