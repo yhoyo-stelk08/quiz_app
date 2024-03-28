@@ -23,11 +23,14 @@ class _QuestionScreenState extends State<QuestionScreen> {
             style: TextStyle(
               fontSize: 25,
               color: Color.fromARGB(174, 221, 208, 136),
-
             ),
           ),
-          // Button widget for the answer
-          // Button for next question
+          // SizedBox
+          SizedBox(
+            height: 30,
+          ),
+          
+          
         ],
       ),
     );
