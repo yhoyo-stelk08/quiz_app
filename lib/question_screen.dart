@@ -14,12 +14,14 @@ class _QuestionScreenState extends State<QuestionScreen> {
   Widget build(context) {
     return const Center(
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           // Text widget for the question
           Text(
             'Question:',
             textAlign: TextAlign.center,
             style: TextStyle(
+              fontSize: 25,
               color: Color.fromARGB(174, 221, 208, 136),
 
             ),
