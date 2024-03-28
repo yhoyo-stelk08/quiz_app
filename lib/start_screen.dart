@@ -21,6 +21,7 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             'assets/images/quiz-logo.png',
             width: 300,
+            color: const Color.fromARGB(163, 14, 173, 236),
           ),
           // SizedBox widget
           const SizedBox(
@@ -43,20 +44,21 @@ class StartScreen extends StatelessWidget {
             height: 30,
           ),
           // OutlinedButton widget
-          OutlinedButton(
+          OutlinedButton.icon(
             // for onPressed property must return a void, so we make dummy void inside the class
             onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 117, 57, 29),
+              backgroundColor: const Color.fromARGB(255, 127, 175, 157),
             ),
-            // for child property must return a widget, so we add the Text widget
-            child: const Text(
+            // for label property is required params and return a widget, so we add the Text widget
+            label: const Text(
               'Start Quiz', // required parameters in Text widget
               // do some style for the text
               style: TextStyle(
                 color: Colors.white,
               ),
             ),
+            icon: const Icon(Icons.arrow_right),
           ),
         ],
       ),
