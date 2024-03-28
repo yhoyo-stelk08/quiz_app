@@ -24,7 +24,7 @@ class StartScreen extends StatelessWidget {
           ),
           // SizedBox widget
           const SizedBox(
-            height: 20,
+            height: 70,
           ),
           // Text widget
           const Text(
@@ -42,8 +42,8 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          // TextButton widget
-          TextButton(
+          // OutlinedButton widget
+          OutlinedButton(
             // for onPressed property must return a void, so we make dummy void inside the class
             onPressed: startQuiz,
             // for child property must return a widget, so we add the Text widget
