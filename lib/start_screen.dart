@@ -20,7 +20,7 @@ class StartScreen extends StatelessWidget {
         // add childrent into container widget
         children: [
           // Image widget
-          Image.asset('assets/images/quiz-logo.png'),
+          Image.asset('assets/images/quiz-logo.png', width: 300,),
           // SizedBox widget
           const SizedBox(
             height: 20,
