@@ -1,29 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:quiz_app/gradient_container.dart';
-import 'package:quiz_app/start_screen.dart';
-
-const beginAlignment = Alignment.topLeft;
-const endAlignment = Alignment.bottomRight;
+import 'package:quiz_app/quiz.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      body: Container(
-        // decorate the Container widget with BoxDecoration Widget
-        decoration: const BoxDecoration(
-          // make gradient with LinearGradient
-          gradient: LinearGradient(
-            colors: [
-            Color.fromARGB(255, 8, 235, 166),
-            Color.fromARGB(255, 14, 59, 184),
-            Color.fromARGB(255, 224, 9, 178),
-          ], // value passed from main dart
-            begin: beginAlignment, // value from local global variable
-            end: endAlignment, // value from local global variable
-          ),
-        ),
-        child: const StartScreen(),
-      ),
-    ),
-  ));
+  runApp(const Quiz());
 }
