@@ -1,6 +1,6 @@
 class QuizQuestion {
   final String question;
-  final List<String> answer;
+  final List<String> answers;
 
-  const QuizQuestion(this.question, this.answer);
+  const QuizQuestion(this.question, this.answers);
 }
