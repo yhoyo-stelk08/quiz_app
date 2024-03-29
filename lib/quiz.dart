@@ -64,7 +64,7 @@ class _QuizState extends State<Quiz> {
                   ? QuestionScreen(
                       onSelectAnswer: chooseAnswer,
                     )
-                  : const ResultScreen(),
+                  : ResultScreen(choosenAnswer: selectedAnswers,),
         ),
       ),
     );
