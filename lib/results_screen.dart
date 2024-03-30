@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/question_summary.dart';
+import 'package:quiz_app/restart_quiz.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({super.key, required this.choosenAnswer});
+  const ResultScreen({super.key, required this.choosenAnswer, });
 
   final List<String> choosenAnswer;
-
+  
   List<Map<String, Object>> getSummaryData() {
     List<Map<String, Object>> summary = [];
     for (var i = 0; i < choosenAnswer.length; i++) {
@@ -61,18 +62,7 @@ class ResultScreen extends StatelessWidget {
               height: 30,
             ),
             // button for restart quiz
-            TextButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.restart_alt),
-              label: Text(
-                'Restart Quiz!',
-                style: GoogleFonts.glegoo(
-                  textStyle: const TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
+            const RestartQuiz(),
           ],
         ),
       ),
