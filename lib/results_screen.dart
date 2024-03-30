@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/question_summary.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.choosenAnswer});
@@ -24,6 +25,12 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final summaryData = getSummaryData();
+    final int numTotalQuestions = questions.length;
+    final int numCorrectAnswers = summaryData.where((data) {
+      return data['user_answer'] == data['correct_answer'];
+    }).length;
+
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -32,19 +39,40 @@ class ResultScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Text
-            const Text('You Answer X out of Y questions correctly !!'),
+            Text(
+              'You Answer $numCorrectAnswers out of $numTotalQuestions questions correctly !!',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.glegoo(
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(153, 172, 206, 174),
+                ),
+              ),
+            ),
             // Padding SizedBox
             const SizedBox(
               height: 30,
             ),
             // Scrolling panel
-            // Text 
-            QuestionSummary(summaryData: getSummaryData()),
+            // Text
+            QuestionSummary(summaryData: summaryData),
             const SizedBox(
               height: 30,
             ),
             // button for restart quiz
-            TextButton(onPressed: () {}, child: const Text('Restart Quiz!')),
+            TextButton.icon(
+              onPressed: () {},
+              icon: const Icon(Icons.restart_alt),
+              label: Text(
+                'Restart Quiz!',
+                style: GoogleFonts.glegoo(
+                  textStyle: const TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

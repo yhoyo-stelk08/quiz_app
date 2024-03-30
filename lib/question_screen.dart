@@ -42,10 +42,11 @@ class _QuestionScreenState extends State<QuestionScreen> {
               currentQuestion.question,
               textAlign: TextAlign.center,
               style: GoogleFonts.glegoo(
-                  textStyle: const TextStyle(
-                fontSize: 23,
-                color: Color.fromARGB(173, 254, 254, 254),
-              )),
+                textStyle: const TextStyle(
+                  fontSize: 23,
+                  color: Color.fromARGB(173, 254, 254, 254),
+                ),
+              ),
             ),
             // SizedBox
             const SizedBox(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/question_number.dart';
+import 'package:quiz_app/question_text.dart';
 
 class QuestionSummary extends StatelessWidget {
   const QuestionSummary({super.key, required this.summaryData});
@@ -7,30 +9,44 @@ class QuestionSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-        children: summaryData.map((data) {
-      return Row(
-        children: [
-          // Text Question Number
-          Text(
-            ((data['question_index'] as int) + 1).toString(),
-          ),
-          // Text Question
-          Column(
-            children: [
-              // Text Question
-              Text(data['question'] as String),
-              const SizedBox(height: 5,),
-              // Text Correct Answer
-              Text(data['correct_answer'] as String),
-              const SizedBox(height: 5,),
-              // Text User Answer
-              Text(data['user_answer'] as String),
-              const SizedBox(height: 5,),
-            ],
-          ),
-        ],
-      );
-    }).toList());
+    return SizedBox(
+      height: 300,
+      child: SingleChildScrollView(
+        child: Column(
+          children: summaryData.map(
+            (data) {
+              return Row(
+                children: [
+                  // Text Question Number
+                  QuestionNumber(
+                    data['question_index'] as int,
+                    data['correct_answer'] == data['user_answer']
+                        ? true
+                        : false,
+                  ),
+                  // Text Question
+                  Expanded(
+                    child: Column(
+                      children: [
+                        // Text Question
+                        // Text(data['question'] as String),
+                        QuestionText(
+                          data['question'] as String,
+                          data['correct_answer'] as String,
+                          data['user_answer'] as String,
+                          data['correct_answer'] == data['user_answer']
+                              ? true
+                              : false,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              );
+            },
+          ).toList(),
+        ),
+      ),
+    );
   }
 }
