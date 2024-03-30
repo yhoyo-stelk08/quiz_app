@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
+import 'package:quiz_app/question_summary.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.choosenAnswer});
@@ -38,7 +39,7 @@ class ResultScreen extends StatelessWidget {
             ),
             // Scrolling panel
             // Text 
-            const Text('List of answer and questions..'),
+            QuestionSummary(summaryData: getSummaryData()),
             const SizedBox(
               height: 30,
             ),
