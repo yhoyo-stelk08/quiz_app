@@ -37,7 +37,7 @@ class ResultScreen extends StatelessWidget {
               height: 30,
             ),
             // Scrolling panel
-            // Text with icon widget inside scrolling panel
+            // Text 
             const Text('List of answer and questions..'),
             const SizedBox(
               height: 30,
