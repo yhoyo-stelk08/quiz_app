@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/data/questions.dart';
 import 'package:quiz_app/question_summary.dart';
-import 'package:quiz_app/restart_quiz.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app/restart_quiz.dart';
 
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({super.key, required this.choosenAnswer, });
+  const ResultScreen({
+    super.key,
+    required this.choosenAnswer,
+    required this.onRestart,
+  });
 
   final List<String> choosenAnswer;
-  
+  final void Function() onRestart;
+
   List<Map<String, Object>> getSummaryData() {
     List<Map<String, Object>> summary = [];
     for (var i = 0; i < choosenAnswer.length; i++) {
@@ -62,7 +67,7 @@ class ResultScreen extends StatelessWidget {
               height: 30,
             ),
             // button for restart quiz
-            const RestartQuiz(),
+            RestartQuiz(onRestart: onRestart),
           ],
         ),
       ),

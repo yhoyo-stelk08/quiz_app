@@ -20,7 +20,6 @@ class _QuizState extends State<Quiz> {
   // Widget? activeScreen;
   var activeScreen = "startScreen";
   List<String> selectedAnswers = [];
-  bool isRestart = false;
 
   void switchScreen() {
     setState(() {
@@ -30,11 +29,14 @@ class _QuizState extends State<Quiz> {
   }
 
   void onRestart() {
-    setState(
-      () {
-        activeScreen = "startScreen";
-      },
-    );
+    if (selectedAnswers.length == questions.length) {
+      setState(
+        () {
+          selectedAnswers = [];
+          activeScreen = "startScreen";
+        },
+      );
+    }
   }
 
   void chooseAnswer(String answer) {
@@ -74,6 +76,7 @@ class _QuizState extends State<Quiz> {
                     )
                   : ResultScreen(
                       choosenAnswer: selectedAnswers,
+                      onRestart: onRestart,
                     ),
         ),
       ),

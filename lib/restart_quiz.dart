@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RestartQuiz extends StatelessWidget {
-  const RestartQuiz({super.key,});
+  const RestartQuiz({super.key, required this.onRestart});
+  final void Function() onRestart;
 
   // final bool isRestart;
 
   @override
   Widget build(BuildContext context) {
     return TextButton.icon(
-      onPressed: () {},
+      onPressed: onRestart,
       icon: const Icon(Icons.restart_alt),
       label: Text(
         'Restart Quiz!',
