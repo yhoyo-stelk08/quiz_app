@@ -12,6 +12,7 @@ class QuestionNumber extends StatelessWidget {
       width: 30,
       height: 30,
       alignment: Alignment.center,
+      margin: const EdgeInsets.fromLTRB(0, 10, 0, 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
         color: isCorrectAnswer
