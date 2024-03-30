@@ -12,7 +12,7 @@ class QuestionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
+      padding: const EdgeInsets.fromLTRB(20, 0, 0, 5),
       alignment: Alignment.topLeft,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

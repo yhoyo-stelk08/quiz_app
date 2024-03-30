@@ -16,6 +16,7 @@ class QuestionSummary extends StatelessWidget {
           children: summaryData.map(
             (data) {
               return Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Text Question Number
                   QuestionNumber(
