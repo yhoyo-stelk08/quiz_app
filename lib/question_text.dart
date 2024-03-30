@@ -29,7 +29,7 @@ class QuestionText extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           // Correct answer text
           Text(
@@ -41,7 +41,7 @@ class QuestionText extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 5,
+            height: 3,
           ),
           // User answer text
           Text(
@@ -53,6 +53,9 @@ class QuestionText extends StatelessWidget {
                   : const Color.fromARGB(255, 238, 16, 0),
               fontSize: 13,
             ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
         ],
       ),
